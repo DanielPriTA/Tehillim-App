@@ -2,7 +2,6 @@ import React from 'react';
 import { StyleSheet, Button, View, SafeAreaView, Text, Alert, ListItem, ScrollView, FlatList } from 'react-native';
 import Constants from 'expo-constants';
 import text from './psalms.json'
-import Psalm from './Psalm.js'
 
 
 function Item({ title }) {
@@ -15,17 +14,20 @@ function Item({ title }) {
 
 
 
-export default function app() {
+export default function Psalm(props) {
   return (
     <View>
-      <Psalm psalmNum={0} />
-      {/* <SafeAreaView style={styles.container}>
-        <FlatList
-          data={text.text}
-          renderItem={({ item }) => <Item title={item.join(' ')} />}
-          keyExtractor={item => item.join(' ')}
-        />
-      </SafeAreaView> */}
+        <Text>
+            {text.text[props.psalmNum-1].join(' ')}
+        </Text>
+              {/* {text.text.map((psalm,i)=>(
+          <ScrollView>
+
+            <Text key={`psalm-${i+1}`}>
+              {psalm}
+            </Text>
+            </ScrollView>
+        ))} */}
     </View>
   )
 }
@@ -38,3 +40,7 @@ const styles = StyleSheet.create({
     fontSize: 32,
   },
 });
+
+// Psalm.propTypes = {
+//     psalmNum: PropTypes.number
+//   }
