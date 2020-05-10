@@ -18,7 +18,7 @@ function Item({ title }) {
 export default function app() {
   return (
     <View>
-      <Psalm psalmNum={2} />
+      <Psalm psalmNum={1} />
       {/* <SafeAreaView style={styles.container}>
         <FlatList
           data={text.text}
