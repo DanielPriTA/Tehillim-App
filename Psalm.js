@@ -4,22 +4,17 @@ import Constants from 'expo-constants';
 import text from './psalms.json'
 
 
-function Item({ title }) {
-  return (
-    <View style={styles.item}>
-      <Text style={styles.title}>{title}</Text>
-    </View>
-  );
-}
 
+export default function Psalm({ route, navigation }) {
+  const { psalmNum } = route.params;
 
-
-export default function Psalm(props) {
   return (
     <View>
-        <Text>
-            {text.text[props.psalmNum-1].join(' ')}
+      <ScrollView>
+        <Text style={{ fontSize: 25, margin: 20 }}>
+          {text.text[psalmNum - 1].join(' ')}
         </Text>
+      </ScrollView>
     </View>
   )
 }
