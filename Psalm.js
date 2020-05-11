@@ -20,14 +20,6 @@ export default function Psalm(props) {
         <Text>
             {text.text[props.psalmNum-1].join(' ')}
         </Text>
-              {/* {text.text.map((psalm,i)=>(
-          <ScrollView>
-
-            <Text key={`psalm-${i+1}`}>
-              {psalm}
-            </Text>
-            </ScrollView>
-        ))} */}
     </View>
   )
 }
