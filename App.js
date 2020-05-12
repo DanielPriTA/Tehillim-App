@@ -1,6 +1,6 @@
 import 'react-native-gesture-handler';
 import React from 'react';
-import { StyleSheet, Button, View, SafeAreaView, Text, Alert, ListItem, ScrollView, FlatList} from 'react-native';
+import { StyleSheet, Button, View, SafeAreaView, Text, Alert, ListItem, ScrollView, FlatList } from 'react-native';
 import Constants from 'expo-constants';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -15,8 +15,9 @@ export default function app() {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name="Psalms" component={Home} />
-        <Stack.Screen name="Psalm" component={Psalm} initialParams={{ psalmNum: 42 }}/>
+        <Stack.Screen name="Psalms" component={Home} 
+        />
+        <Stack.Screen name="Psalm" component={Psalm} initialParams={{ psalmNum: 42 }} />
       </Stack.Navigator>
     </NavigationContainer>
   )
