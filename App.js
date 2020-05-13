@@ -8,20 +8,52 @@ import SettingsList from 'react-native-settings-list';
 import Home from './Home'
 import text from './psalms.json'
 import Psalm from './Psalm.js'
+import Setting from './Settings'
+import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 
-const Stack = createStackNavigator();
+
+const Tab = createMaterialBottomTabNavigator();
+
+let Stack = createStackNavigator();
 
 export default function app() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name="Psalms" component={Home} 
+      <Tab.Navigator
+        initialRouteName="Home"
+        Color="#e91e63"
+      >
+        <Tab.Screen
+          name="Home"
+          component={Home}
+          options={{
+            tabBarLabel: 'Home',
+          }}
         />
-        <Stack.Screen name="Psalm" component={Psalm} initialParams={{ psalmNum: 42 }} />
-      </Stack.Navigator>
+        <Tab.Screen
+          name="Settings"
+          component={Psalm}
+          options={{
+            tabBarLabel: 'Settings',
+          }}
+        />
+      </Tab.Navigator>
     </NavigationContainer>
   )
 }
+
+// function Home() {
+//   return (
+//     <NavigationContainer>
+//       <Stack.Navigator initialRouteName="Home">
+//         <Stack.Screen name="Psalms" component={Home}
+//         />
+//         <Stack.Screen name="Psalm" component={Psalm} initialParams={{ psalmNum: 42 }} />
+//       </Stack.Navigator>
+//     </NavigationContainer>
+//   )
+// }
+
 
 const styles = StyleSheet.create({
   item: {
@@ -31,3 +63,11 @@ const styles = StyleSheet.create({
     fontSize: 32,
   },
 });
+
+
+{/* <Stack.Navigator initialRouteName="Home">
+        <Stack.Screen name="Psalms" component={Home}
+        />
+        <Stack.Screen name="Psalm" component={Psalm} initialParams={{ psalmNum: 42 }} />
+      </Stack.Navigator>
+    </NavigationContainer> */}
