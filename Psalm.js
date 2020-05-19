@@ -16,7 +16,7 @@ export default function Psalm({ route, navigation }) {
         </Text>
       </ScrollView>
     </View>
-  )
+  ) 
 }
 
 const styles = StyleSheet.create({
