@@ -12,9 +12,9 @@ import * as Font from 'expo-font';
 
 const Stack = createStackNavigator();
 
-const getFonts = () => Font.loadAsync({
-    'Philosopher-Regular': require('./assets/fonts/Philosopher-Regular.ttf')
-  });
+// const getFonts = () => Font.loadAsync({
+//     'Philosopher-Regular': require('./assets/fonts/Philosopher-Regular.ttf')
+//   });
   
 
 export default function GroupScreen() {

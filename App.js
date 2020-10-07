@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import { StyleSheet, Button, View, SafeAreaView, Text, Alert, ListItem, ScrollView, FlatList } from 'react-native';
 import Constants from 'expo-constants';
 import { NavigationContainer } from '@react-navigation/native';
-<<<<<<< HEAD
 import HomeScreen from './Home.js'
 import SettingsScreen from './Settings.js'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -83,52 +82,6 @@ return (
 //     <NavigationContainer>
 //       <Stack.Navigator initialRouteName="Home">
 //         <Stack.Screen name="Psalms" component={Home} 
-=======
-import { createStackNavigator } from '@react-navigation/stack';
-import SettingsList from 'react-native-settings-list';
-import Home from './Home'
-import text from './psalms.json'
-import Psalm from './Psalm.js'
-import Setting from './Settings'
-import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
-
-
-const Tab = createMaterialBottomTabNavigator();
-
-let Stack = createStackNavigator();
-
-export default function app() {
-  return (
-    <NavigationContainer>
-      <Tab.Navigator
-        initialRouteName="Home"
-        Color="#e91e63"
-      >
-        <Tab.Screen
-          name="Home"
-          component={Home}
-          options={{
-            tabBarLabel: 'Home',
-          }}
-        />
-        <Tab.Screen
-          name="Settings"
-          component={Psalm}
-          options={{
-            tabBarLabel: 'Settings',
-          }}
-        />
-      </Tab.Navigator>
-    </NavigationContainer>
-  )
-}
-
-// function Home() {
-//   return (
-//     <NavigationContainer>
-//       <Stack.Navigator initialRouteName="Home">
-//         <Stack.Screen name="Psalms" component={Home}
->>>>>>> 66211a4033f118f45889e48b6ac91a3d00788ca6
 //         />
 //         <Stack.Screen name="Psalm" component={Psalm} initialParams={{ psalmNum: 42 }} />
 //       </Stack.Navigator>
@@ -136,7 +89,6 @@ export default function app() {
 //   )
 // }
 
-<<<<<<< HEAD
 // const styles = StyleSheet.create({
 //   item: {
 //     backgroundColor: '#f9c2ff',
@@ -145,22 +97,3 @@ export default function app() {
 //     fontSize: 32,
 //   },
 // });
-=======
-
-const styles = StyleSheet.create({
-  item: {
-    backgroundColor: '#f9c2ff',
-  },
-  title: {
-    fontSize: 32,
-  },
-});
-
-
-{/* <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name="Psalms" component={Home}
-        />
-        <Stack.Screen name="Psalm" component={Psalm} initialParams={{ psalmNum: 42 }} />
-      </Stack.Navigator>
-    </NavigationContainer> */}
->>>>>>> 66211a4033f118f45889e48b6ac91a3d00788ca6
